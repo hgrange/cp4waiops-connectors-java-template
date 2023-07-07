@@ -13,8 +13,8 @@ configurations:
 
 images:
   - name: java-grpc-connector-template
-    newName: PLACEHOLDER_REGISTRY_ADDRESS/cp/aiopsedge/java-grpc-connector-template
-    newTag: latest
+    newName: docker-na-public.artifactory.swg-devops.com/hyc-cp4mcm-team-docker-local/ibmcom/java-grpc-connector-template
+    newTag: updateTemplateJuly
 
 vars:
   - name: SERVICE_NAME

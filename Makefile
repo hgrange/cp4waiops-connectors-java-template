@@ -1,5 +1,5 @@
-REGISTRY ?= PLACEHOLDER_REGISTRY_ADDRESS
-TAG ?= latest
+REGISTRY ?= docker.io
+TAG ?= v1
 
 IMAGE := $(REGISTRY)/cp/aiopsedge/java-grpc-connector-template:$(TAG)
 
@@ -10,14 +10,14 @@ else
 	SED_EXE := sed
 endif
 
-podman-login:
-	podman login $(REGISTRY) -u "$$REGISTRY_USERNAME" -p "$$REGISTRY_PASSWORD"
+docker-login:
+	docker login $(REGISTRY) -u "$$REGISTRY_USERNAME" -p "$$REGISTRY_PASSWORD"
 
-podman-build:
+docker-build:
 	chmod ug+x container/import-certs.sh
-	podman build -f container/Dockerfile -t $(IMAGE) .
+	docker build -f container/Dockerfile -t $(IMAGE) .
 
-podman-push:
+docker-push:
 	podman push $(IMAGE)
 
 .PHONY: format

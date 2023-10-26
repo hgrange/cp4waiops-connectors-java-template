@@ -20,4 +20,4 @@ images:
     newTag: v1
   - name: generic-topology-processor
     newName: cp.icr.io/cp/cp4waiops/generic-topology-processor
-    newTag: latest
+    newTag: v4.2.0-20230912.0045-42add3b03

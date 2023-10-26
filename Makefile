@@ -1,7 +1,7 @@
 REGISTRY ?= docker.io
 TAG ?= v1
 
-IMAGE := $(REGISTRY)/cp/aiopsedge/java-grpc-connector-template:$(TAG)
+IMAGE := $(REGISTRY)/hgrange/java-grpc-connector-template:$(TAG)
 
 ifeq ($(shell uname -s),Darwin)
 	# gnu-sed, can be installed using homebrew
